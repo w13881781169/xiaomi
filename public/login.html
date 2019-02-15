@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小米登录界面</title>
+		<style type="text/css">
+			a{text-decoration: none;}
+			.webCon{width: 1130px;margin: 0 auto;}
+			.clearfix:before,.clearfix:after{content: '';display: table;}
+		    .clearfix:after{clear: both;}
+		    .logo{width: 200px;height: 98px;background: url(img/mistore_logo.png);}
+		    .logo a{text-indent: -9999em;height: 98px;display: block;}
+		    h2{margin-bottom: 50px;color:#EF7600;font-size: 22px;font-weight: 500;}
+            h2 span{display: inline-block;height: 27px;width: 154px;line-height: 27px;text-align: center;}
+            h2 i{height: 26px;width: 2px;background: #ccc;display: inline-block;margin-top: 5px;}
+		    .banner{height: 588px;width: 100%;position: absolute;top: 98px;left:0;background:url(img/93669e3fa2baa668227d699f69788fd6.jpg) no-repeat top center ;}
+		    .loginform{width: 410px;min-height: 524px;font-size: 14px;z-index: 4;float: right;padding-left: 30px;padding-right:50px;box-sizing: border-box;background: white;margin-top: 20px;}
+		    .input{height: 22px;width: 306px;padding: 13px 16px 13px 14px;line-height: 22px;display: block;border: none;outline: none;border: 1px solid #ccc;margin-top: 20px;}
+		    .inputlogin{background: #EF7600;height:50px;width: 337px;border: none;color: white;margin-top: 30px;}
+		    .elselogin{font-size: 12px;}
+		    .elselogin span{float: left;color: #EF7600;cursor: pointer;}
+		    .elselogin a{float: right;color: #999;}
+		</style>
+	</head>
+	<body>
+		<div class="webCon">
+			<div class="logo">
+				<a href="index.html">小米首页</a>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="webCon">
+				<form class="loginform" action="">
+					<h2><span>账号登录</span><i></i><span>扫码登录</span></h2>
+					<div class="numberlogin">
+						<input type="text" / class="input" placeholder="邮箱/手机号码/小米ID">
+						<input type="password" class="input" placeholder="密码"/>
+						<input type="submit" class="inputlogin" value="登录"/>
+						<p class="elselogin"><span>手机短信登录/注册</span><a href="">立即注册</a><a href="">忘记密码</a></p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

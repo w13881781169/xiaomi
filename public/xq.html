@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			a{color: #333333;text-decoration: none;}
+			i{font-style: normal;}
+			img{display: block;}
+			@font-face {
+  font-family: 'iconfont';  /* project id 777870 */
+  src: url('http://at.alicdn.com/t/font_777870_wx8cjx2x8y.eot');
+  src: url('http://at.alicdn.com/t/font_777870_wx8cjx2x8y.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_777870_wx8cjx2x8y.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_777870_wx8cjx2x8y.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_777870_wx8cjx2x8y.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+             ul li{list-style: none;}
+		   .ztBanner{height:120px;width:100%;background: url(../img/xm.jpg) no-repeat center 0;}
+		   .nav_bg{height: 40px;width: 100%;background: #333;}
+		   .webCon{height: auto;width: 1226px;margin: 0 auto;}
+		   .clearfix:before,.clearfix:after{content: '';display: table;}
+		   .clearfix:after{clear: both;}
+		   ul li,ol li{list-style: none;}
+		   .navCon{line-height:40px;color: gray;font-size: 12px;}
+		   .navLeft{float: left;}
+		   .navLeft li{float: left;margin-right: 20px;position: relative;}
+		   .navLeft li:after{content: '';position: absolute;right:-10px;top:15px;height: 12px;
+		   width:1px;background: #444;}
+		   .navLeft li:last-of-type:after{background: none;}
+		   .navRight{float: right;}
+		   .navRight li{float: left;margin-left: 20px;position: relative;}
+		   .navRight li:after{content: '';position: absolute;right: -10px;top: 15px;height: 12px;
+		   width: 1px;background: #444;}
+		   .navRight li:last-of-type:after{background: none;}
+		   .navLeft li:hover,.navRight li:hover{color: orange;cursor: pointer;}
+		   .cur{background: #444;padding-left: 20px;padding-right: 20px;position: relative;}
+		   .shoppingBox{height: 122px;width: 390px;background: white;position: absolute;
+		   top: 40px;right: 0;z-index: 999;line-height: 122px;display: none;text-align: center;color: black;}
+		   .cur:hover .shoppingBox{display: block;}
+		   .mTop{margin-top: 30px;}
+		   .logo{height: 52px;width: 52px;float: left;}
+		   .logo a{background: url(img/logo.png) no-repeat;height: 55px;width: 55px;display: inline-block;
+		text-indent: -9999em;}
+		.shoppingLogo{width:163px;height: 63px;float: left;}
+		.shoppingLogo a{width: 163px;height: 63px;background: url(img/163d63.gif);text-indent: -999em;
+		display: inline-block;margin-top: -10px;}
+		.menu{float: left;height: 52px;width: auto;line-height: 52px;}
+		.menu li{list-style: none;float: left;margin-right:20px ;}
+		.menu li a:hover{color: #ef7600;}
+		.searchBox{width: 350px;height: 44px;float:right;margin-top: 4px;position: relative;}
+		
+		.productList{width: 292px;border: 1px solid #EF7600;padding: 5px 10px 15px;box-sizing: border-box;position: absolute;left: 0;top: 43px;z-index: 999;background: #fff;display: none;}
+		.productList li{margin-top: 10px;width: 100%;height: 20px;}
+		.productList li span:first-of-type{float: left;font-size: 14px;color: black;}
+		.productList li span:last-of-type{float: right;font-size: 14px;color: #999;}
+		.search{width: 290px;height: 42px;float: left;border: 1px solid #ccc;transition:0.2s }
+		.search:hover{border-color: #666;}
+		.searchBox:hover .iconBox{border-color: #666;}
+		
+		.search:focus{border: 1px solid #EF7600;}
+		
+		.search:focus+.iconBox{border: 1px solid #EF7600;}
+		
+	     /*.color1{border-color:#666;}
+         i.color2{border-color:#EF7600;}
+          input.color2{border-color:#EF7600;}*/
+		.iconBox{height: 42px;width: 56px;border: 1px solid #CCC;float: left;margin-left: -1px;transition:0.2s;
+		display: inline-block;color: #999;font-size: 22px;text-align: center;line-height: 42px;}
+		.iconBox:hover{background: #EF7600;color: #fff;border-color:#EF7600;}
+		.searchTop{position: absolute;left: 150px;top: 12px;font-size: 12px;width: auto;height: 22px;}
+		.searchTop a{float:left; background: #999;line-height: 22px; margin-right: 10px;padding-right: 3px;padding-left: 3px;}
+		.searchTop a:hover{color: white;background: #EF7600;}
+		/*.search:focus+.iconBox{border-color: #EF7600;}*/
+		.search:focus+.searchTop{display: none;}
+		.productbanner{height: 60px;line-height: 60px;}
+		.productname{float: left;}
+		.productxq{float: right;}
+		.productxq li{float: left;font-size: 14px;color: #666;margin-left: 20px;cursor: pointer;}
+		.productxq li:hover{color: #EF7600;}
+		.productimg{height: 560px;width: 560px;float: left;}
+		.rightjs{height: 560px;width: 520px;float: left;padding-top:100px;box-sizing: border-box;}
+		.rightjs li{padding-left: 20px;padding-right: 20px;margin-top: 20px;color: #666;line-height: 2;}
+		.curPrice{color: #EF7600;font-size: 14px;}
+		.oldPrice{color: #999;font-size: 14px;margin-left: 6px;}
+		</style>
+	</head>
+	<body>
+		<div class="nav_bg">
+			<div class="webCon clearfix navCon">
+		<ul class="navLeft">
+			<li>小米商城</li>
+			<li>MIUI</li>
+			<li>loT</li>
+			<li>云服务</li>
+			<li>金融</li>
+			<li>有品</li>
+		</ul>
+		<ul class="navRight">
+			<li>登录</li>
+			<li>注册</li>
+			<li>消息通知</li>
+			<li class="cur">购物车<div class="shoppingBox">
+				购物车中还没有商品，请添加商品
+			</div></li>
+		</ul>
+			</div>
+		</div>
+		<div class="webCon clearfix mTop">
+			<h1 class="logo">
+				<a href="http://www.mi.com" target="_blank"  title="小米官网">小米官网</a>
+			</h1>
+			<div class="shoppingLogo">
+				<a href="#">小米发烧节</a>
+			</div>
+			<ul class="menu">
+				<li><a href="#" target="_blank">小米手机</a></li>
+				<li><a href="#" target="_blank">红米</a></li>
+				<li><a href="#" target="_blank">电视</a></li>
+				<li><a href="#" target="_blank">笔记本</a></li>
+				<li><a href="#" target="_blank">盒子</a></li>
+				<li><a href="#" target="_blank">新品</a></li>
+				<li><a href="#" target="_blank">路由器</a></li>
+				<li><a href="#" target="_blank">智能硬件</a></li>
+				<li><a href="#" target="_blank">服务</a></li>
+				<li><a href="#" target="_blank">社区</a></li>
+			</ul>
+			<div class="searchBox">
+				<div class="searchTop">
+					<a href="#">小米8</a>
+					<a href="#">小米MIX 2S</a>
+				</div>
+				<input class="search" type="text" />
+				<i class="iconBox iconfont">&#xe616;</i>
+				<ul class="productList">
+					<li><span>小米6s</span><span>约有6件</span></li>
+					<li><span>小米6s</span><span>约有6件</span></li>
+					<li><span>小米6s</span><span>约有6件</span></li>
+					<li><span>小米6s</span><span>约有6件</span></li>
+					<li><span>小米6s</span><span>约有6件</span></li>
+					<li><span>小米6s</span><span>约有6件</span></li>
+					<li><span>小米6s</span><span>约有6件</span></li>
+				</ul>
+			</div>
+			<script>
+				var ipt=document.querySelector('.search'),
+				    searchtop=document.querySelector('.searchTop'),
+				    product=document.querySelector('.productList'),
+				    secrchBox=document.querySelector('.searchBox'),
+				    iconBox=document.querySelector('.iconBox');
+				    ipt.onfocus=function(){
+				    	searchtop.style.display='none';
+				    	product.style.display='block';
+//				    	iconBox.classList.add('color2');
+//				    	ipt.classList.add('color2');
+				    }
+				    ipt.onblur=function(){
+				    	searchtop.style.display='block';
+				    	product.style.display='none';
+//				    	iconBox.classList.remove('color2');
+//				    	ipt.classList.remove('color2');
+				    }
+//				    secrchBox.onmouseover=function(){
+//				    	ipt.style.borderColor='#666';
+//				    	iconBox.style.borderColor='#666';
+//				    }
+//				    secrchBox.onmouseout=function(){
+//				    	ipt.style.borderColor='#ccc';
+//				    	iconBox.style.borderColor='#ccc';
+//				    }
+				    
+			</script>
+		</div>
+		<div class="webCon clearfix">
+		<div class="productbanner">
+		 <span class="productname">小米Max &nbsp;3</span>
+		 <ul class="productxq">
+		 	<li>概述</li>
+		 	<li>图集</li>
+		 	<li>参数</li>
+		 	<li>F码通道</li>
+		 	<li>用户评价</li>
+		 </ul>
+		</div>
+		<div class="projs">
+			<img class="productimg" src="img/fb4641a0857d2871f671247b8818b773.jpg" />
+			<ul class="rightjs">
+				<li>小米Max &nbsp;3</li>
+				<li>大屏大电量 震撼视界 / 5500mAh 电量，支持给多个设备充电 / AI 双摄超大像素，双核对焦 / 单手可握纤薄全金属机身</li>
+				<li><i class="curPrice">579元</i><del class="oldPrice">599元</del></li>
+			</ul>
+		</div>
+		</div>
+	</body>
+</html>
